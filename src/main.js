@@ -1,5 +1,18 @@
 import './style.css'
-import { Shield, Users, Brain, BookOpen, Award, TrendingUp, CheckCircle, ArrowRight, Menu, X } from 'lucide'
+
+// Create SVG icons as HTML strings
+const icons = {
+  shield: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+  users: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  brain: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6"/><path d="m15.5 3.5-1.5 1.5m0 6 1.5 1.5M1 12h6m6 0h6m-15.5 3.5 1.5-1.5m6 0 1.5 1.5m-1.5-9L8.5 3.5"/></svg>',
+  bookOpen: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+  award: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>',
+  trendingUp: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg>',
+  checkCircle: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>',
+  arrowRight: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>',
+  menu: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
+  x: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+}
 
 // Mobile menu functionality
 let mobileMenuOpen = false
@@ -75,7 +88,7 @@ document.querySelector('#app').innerHTML = `
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center space-x-2">
           <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-            ${Shield.toString().replace('<svg', '<svg class="w-5 h-5 text-white"')}
+            ${icons.shield.replace('<svg', '<svg class="w-5 h-5 text-white"')}
           </div>
           <span class="text-xl font-bold text-gray-900">CyberVillagers</span>
         </div>
@@ -93,8 +106,8 @@ document.querySelector('#app').innerHTML = `
         
         <!-- Mobile Menu Button -->
         <button class="md:hidden" onclick="toggleMobileMenu()">
-          ${Menu.toString().replace('<svg', '<svg id="menu-icon" class="w-6 h-6 text-gray-700"')}
-          ${X.toString().replace('<svg', '<svg id="close-icon" class="w-6 h-6 text-gray-700 hidden"')}
+          ${icons.menu.replace('<svg', '<svg id="menu-icon" class="w-6 h-6 text-gray-700"')}
+          ${icons.x.replace('<svg', '<svg id="close-icon" class="w-6 h-6 text-gray-700 hidden"')}
         </button>
       </div>
       
@@ -126,7 +139,7 @@ document.querySelector('#app').innerHTML = `
         <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
           <button class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
             <span>Start Free Assessment</span>
-            ${ArrowRight.toString().replace('<svg', '<svg class="w-5 h-5"')}
+            ${icons.arrowRight.replace('<svg', '<svg class="w-5 h-5"')}
           </button>
           <button class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all">
             Watch Demo
@@ -185,7 +198,7 @@ document.querySelector('#app').innerHTML = `
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="max-w-4xl mx-auto">
         <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-          ${Users.toString().replace('<svg', '<svg class="w-8 h-8 text-white"')}
+          ${icons.users.replace('<svg', '<svg class="w-8 h-8 text-white"')}
         </div>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
         <p class="text-2xl text-gray-700 leading-relaxed">
@@ -208,7 +221,7 @@ document.querySelector('#app').innerHTML = `
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center p-8 bg-blue-50 rounded-xl">
           <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            ${BookOpen.toString().replace('<svg', '<svg class="w-8 h-8 text-white"')}
+            ${icons.bookOpen.replace('<svg', '<svg class="w-8 h-8 text-white"')}
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">15+ Years in SaaS Education</h3>
           <p class="text-gray-700">Delivering best-in-class online employee learning at scale, with proven methodologies that drive real behavior change.</p>
@@ -216,7 +229,7 @@ document.querySelector('#app').innerHTML = `
         
         <div class="text-center p-8 bg-red-50 rounded-xl">
           <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            ${Shield.toString().replace('<svg', '<svg class="w-8 h-8 text-white"')}
+            ${icons.shield.replace('<svg', '<svg class="w-8 h-8 text-white"')}
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">15+ Years in FBI Cyber Response</h3>
           <p class="text-gray-700">Direct experience responding to the world's largest cyber breaches, understanding threats from the inside out.</p>
@@ -224,7 +237,7 @@ document.querySelector('#app').innerHTML = `
         
         <div class="text-center p-8 bg-green-50 rounded-xl">
           <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            ${Award.toString().replace('<svg', '<svg class="w-8 h-8 text-white"')}
+            ${icons.award.replace('<svg', '<svg class="w-8 h-8 text-white"')}
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Certified Cyber Experts</h3>
           <p class="text-gray-700">OSCP, CompTIA PenTest+, Security+, Network+, ITF+ certified professionals who stay ahead of emerging threats.</p>
@@ -247,7 +260,7 @@ document.querySelector('#app').innerHTML = `
         <div class="space-y-8">
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              ${Brain.toString().replace('<svg', '<svg class="w-6 h-6 text-white"')}
+              ${icons.brain.replace('<svg', '<svg class="w-6 h-6 text-white"')}
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">AI-Enhanced Training</h3>
@@ -257,7 +270,7 @@ document.querySelector('#app').innerHTML = `
           
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              ${TrendingUp.toString().replace('<svg', '<svg class="w-6 h-6 text-white"')}
+              ${icons.trendingUp.replace('<svg', '<svg class="w-6 h-6 text-white"')}
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">Automated Phishing Simulations</h3>
@@ -267,7 +280,7 @@ document.querySelector('#app').innerHTML = `
           
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              ${CheckCircle.toString().replace('<svg', '<svg class="w-6 h-6 text-white"')}
+              ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6 text-white"')}
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">Human-First Incident Response</h3>
@@ -280,19 +293,19 @@ document.querySelector('#app').innerHTML = `
           <h3 class="text-2xl font-bold text-gray-900 mb-6">Proven Framework Integration</h3>
           <div class="space-y-4">
             <div class="flex items-center space-x-3">
-              ${CheckCircle.toString().replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
+              ${icons.checkCircle.replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
               <span class="text-gray-700"><strong>Security Awareness Training</strong> (CIS Control 14)</span>
             </div>
             <div class="flex items-center space-x-3">
-              ${CheckCircle.toString().replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
+              ${icons.checkCircle.replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
               <span class="text-gray-700"><strong>Data Recovery</strong> (CIS Control 11)</span>
             </div>
             <div class="flex items-center space-x-3">
-              ${CheckCircle.toString().replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
+              ${icons.checkCircle.replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
               <span class="text-gray-700"><strong>Access Control</strong> (CIS Control 5)</span>
             </div>
             <div class="flex items-center space-x-3">
-              ${CheckCircle.toString().replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
+              ${icons.checkCircle.replace('<svg', '<svg class="w-5 h-5 text-green-600"')}
               <span class="text-gray-700"><strong>Continuous Monitoring</strong> & Awareness Nudges</span>
             </div>
           </div>
@@ -406,7 +419,7 @@ document.querySelector('#app').innerHTML = `
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <button class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
           <span>Book Free Assessment</span>
-          ${ArrowRight.toString().replace('<svg', '<svg class="w-5 h-5"')}
+          ${icons.arrowRight.replace('<svg', '<svg class="w-5 h-5"')}
         </button>
         <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all">
           Contact Our Experts
@@ -422,7 +435,7 @@ document.querySelector('#app').innerHTML = `
         <div>
           <div class="flex items-center space-x-2 mb-4">
             <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              ${Shield.toString().replace('<svg', '<svg class="w-5 h-5 text-white"')}
+             ${icons.shield.replace('<svg', '<svg class="w-5 h-5 text-white"')}
             </div>
             <span class="text-xl font-bold">CyberVillagers</span>
           </div>
