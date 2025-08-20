@@ -865,3 +865,8 @@ a:focus {
     padding-right: 2rem;
   }
 }
+
+/* Background opacity */
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
