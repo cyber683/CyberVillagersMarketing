@@ -254,30 +254,30 @@ function initHomePage() {
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
               ${icons.brain.replace('<svg', '<svg class="w-6 h-6 text-white"')}
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">AI-Enhanced Training</h3>
-              <p class="text-gray-700">Personalized learning paths aligned with CIS Controls, adapting to each employee's role and risk profile.</p>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Training</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Phishing Simulations</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Incident Response</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Penetration Testing</a></li>
             </div>
           </div>
           
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
               ${icons.trendingUp.replace('<svg', '<svg class="w-6 h-6 text-white"')}
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Automated Phishing Simulations</h3>
-              <p class="text-gray-700">Continuous testing with real-world scenarios, providing immediate feedback and targeted remediation.</p>
+              <li><a href="/blog" class="hover:text-brand-light transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Webinars</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Case Studies</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Guides</a></li>
             </div>
           </div>
           
           <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
               ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6 text-white"')}
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Human-First Incident Response</h3>
-              <p class="text-gray-700">AI-tailored response plans backed by real FBI cyber response experience when incidents occur.</p>
+              <li><a href="#" class="hover:text-brand-light transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Contact</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Terms of Service</a></li>
             </div>
           </div>
         </div>

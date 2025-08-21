@@ -62,16 +62,21 @@ export function initBlog() {
     <!-- Blog Posts Grid -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
           <!-- Featured Blog Post -->
-          <div class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-64 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.shield.replace('<svg', '<svg class="w-8 h-8"')}
+          <div class="lg:col-span-3 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-64 bg-gradient-to-br from-red-500 to-red-600 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                   alt="Cybersecurity Shield" 
+                   class="w-full h-full object-cover opacity-80">
+              <div class="absolute inset-0 bg-red-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.shield.replace('<svg', '<svg class="w-8 h-8"')}
+                  </div>
+                  <h3 class="text-2xl font-bold">Featured Article</h3>
                 </div>
-                <h3 class="text-2xl font-bold">Featured Article</h3>
               </div>
             </div>
             <div class="p-6">
@@ -97,7 +102,7 @@ export function initBlog() {
           </div>
 
           <!-- Recent Posts Sidebar -->
-          <div class="space-y-6">
+          <div class="lg:col-span-1 space-y-6">
             <div class="bg-gray-50 p-6 rounded-xl">
               <h3 class="text-lg font-bold text-gray-900 mb-4">Recent Posts</h3>
               <div class="space-y-4">
@@ -145,12 +150,17 @@ export function initBlog() {
         <!-- More Blog Posts -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.users.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="Team Training" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-green-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.users.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">Training Guide</span>
                 </div>
-                <span class="text-sm">Training Guide</span>
               </div>
             </div>
             <div class="p-6">
@@ -175,12 +185,17 @@ export function initBlog() {
           </article>
 
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.brain.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="AI Technology" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-purple-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.brain.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">AI & Security</span>
                 </div>
-                <span class="text-sm">AI & Security</span>
               </div>
             </div>
             <div class="p-6">
@@ -205,12 +220,17 @@ export function initBlog() {
           </article>
 
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="Password Security" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-orange-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">Best Practices</span>
                 </div>
-                <span class="text-sm">Best Practices</span>
               </div>
             </div>
             <div class="p-6">
@@ -256,30 +276,30 @@ export function initBlog() {
           <div>
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">Security Training</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Phishing Simulations</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Incident Response</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Penetration Testing</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Training</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Phishing Simulations</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Incident Response</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Penetration Testing</a></li>
             </ul>
           </div>
           
           <div>
             <h3 class="text-lg font-semibold mb-4">Resources</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Webinars</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Security Guides</a></li>
+              <li><a href="/blog" class="hover:text-brand-light transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Webinars</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Case Studies</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Guides</a></li>
             </ul>
           </div>
           
           <div>
             <h3 class="text-lg font-semibold mb-4">Company</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Contact</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>

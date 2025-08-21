@@ -83,12 +83,14 @@ export function initBlogPost() {
         <div class="prose prose-lg max-w-none">
           
           <!-- Featured Image Placeholder -->
-          <div class="w-full h-64 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-8">
-            <div class="text-white text-center">
-              <div class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                ${icons.shield.replace('<svg', '<svg class="w-8 h-8"')}
+          <div class="w-full h-96 rounded-xl overflow-hidden mb-8">
+            <img src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                 alt="Cybersecurity team working on ransomware protection" 
+                 class="w-full h-full object-cover">
+            <div class="relative -mt-24 bg-gradient-to-t from-black/60 to-transparent h-24 flex items-end">
+              <div class="text-white p-6">
+                <p class="text-lg font-semibold">Ransomware Protection Strategy</p>
               </div>
-              <p class="text-lg font-semibold">Ransomware Protection</p>
             </div>
           </div>
 
@@ -230,12 +232,17 @@ export function initBlogPost() {
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.users.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="Team Training" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-green-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.users.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">Training Guide</span>
                 </div>
-                <span class="text-sm">Training Guide</span>
               </div>
             </div>
             <div class="p-6">
@@ -255,12 +262,17 @@ export function initBlogPost() {
           </article>
 
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.brain.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="AI Technology" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-purple-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.brain.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">AI & Security</span>
                 </div>
-                <span class="text-sm">AI & Security</span>
               </div>
             </div>
             <div class="p-6">
@@ -280,12 +292,17 @@ export function initBlogPost() {
           </article>
 
           <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-              <div class="text-white text-center">
-                <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
-                  ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6"')}
+            <div class="h-48 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                   alt="Cyber Security" 
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-blue-600/60 flex items-center justify-center">
+                <div class="text-white text-center">
+                  <div class="w-12 h-12 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                    ${icons.checkCircle.replace('<svg', '<svg class="w-6 h-6"')}
+                  </div>
+                  <span class="text-sm">Best Practices</span>
                 </div>
-                <span class="text-sm">Best Practices</span>
               </div>
             </div>
             <div class="p-6">
@@ -326,30 +343,30 @@ export function initBlogPost() {
           <div>
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">Security Training</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Phishing Simulations</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Incident Response</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Penetration Testing</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Training</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Phishing Simulations</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Incident Response</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Penetration Testing</a></li>
             </ul>
           </div>
           
           <div>
             <h3 class="text-lg font-semibold mb-4">Resources</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Webinars</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Security Guides</a></li>
+              <li><a href="/blog" class="hover:text-brand-light transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Webinars</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Case Studies</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Security Guides</a></li>
             </ul>
           </div>
           
           <div>
             <h3 class="text-lg font-semibold mb-4">Company</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Contact</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-brand-light transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>
